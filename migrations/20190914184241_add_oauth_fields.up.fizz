@@ -1,0 +1,4 @@
+add_column("users", "oauth_provider", "string", {"null": true})
+add_column("users", "oauth_user_id", "string", {"null": true})
+
+add_index("users", ["oauth_provider", "oauth_user_id"], {"unique": true})

@@ -1,0 +1,2 @@
+drop_column("users", "oauth_provider")
+drop_column("users", "oauth_user_id")

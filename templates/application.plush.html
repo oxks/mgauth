@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Buffalo - Myauth</title>
+    <%= stylesheetTag("application.css") %>
+    <meta name="csrf-param" content="authenticity_token" />
+    <meta name="csrf-token" content="<%= authenticity_token %>" />
+    <link rel="icon" href="<%= assetPath("images/favicon.ico") %>">
+  </head>
+  <body>
+  <div class="container">
+  <header>
+
+    <div class="row">
+      <div class="col-md-1 col-sm-2 col-xs-2 logo">
+        <a href="<%= rootPath() %>"><img src="<%= rootPath() %>assets/images/logo.svg" alt=""></a>
+      </div>
+      <div class="col-md-9 col-sm-9 col-xs-10 titles">
+        <h1><%= t("welcome_greeting") %></h1>
+      </div>
+    </div>
+ 
+
+
+</header>
+</div>
+
+    <div class="container">
+
+      <%= partial("flash.html") %>
+      <%= yield %>
+    </div>
+
+    <%= javascriptTag("application.js") %>
+
+    <div class="container">
+
+    <div class="foot"> <span> Powered by Buffalo<a href="/">localhost</a></span> </div>
+   
+   </div>
+   
+  </body>
+</html>
